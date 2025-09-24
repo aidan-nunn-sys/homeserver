@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - TZ=America/New_York               # Adjust timezone as needed
+      - WATCHTOWER_SCHEDULE=0 0 4 * *
+      - WATCHTOWER_CLEANUP=true           # Remove old images
+
