@@ -26,7 +26,7 @@ A personal self-hosted homeserver environment powered by Docker Compose. This st
 1. Clone the repo
 
 <pre>
-	git clone https://github.com/(your-username)/(your-repo).git
+	git clone https://github.com/aidan-nunn-sys/homeserver.git
 	cd (your-repo)
 </pre>
 
