@@ -5,6 +5,7 @@ file. Prints file:line and the kind of finding, never the value itself.
 """
 import argparse
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -27,7 +28,7 @@ def env_values(env):
 def scan_text(text, values, allowlist, check_ids=True):
     findings = []
     for number, line in enumerate(text.splitlines(), 1):
-        if any(v in line for v in values):
+        if any(re.search(r'(?<![A-Za-z0-9])' + re.escape(v) + r'(?![A-Za-z0-9])', line) for v in values):
             findings.append((number, '.env value'))
         if PRIVATE_IP.search(line):
             findings.append((number, 'private IP'))

@@ -56,6 +56,15 @@ class ExportTest(unittest.TestCase):
         self.assertEqual(cfg['PinnedItemId'], fixtures.ITEM_ID)
         self.assertIn(fixtures.ITEM_ID, self.read('ids-allowlist.json'))
 
+    def test_item_id_kept_everywhere_once_kept_anywhere(self):
+        cfg = self.client.responses[f'Plugins/{fixtures.PLUGIN_ID}/Configuration']
+        self.client.responses[f'Plugins/{fixtures.PLUGIN_ID}/Configuration'] = {
+            'DefaultVideos': [fixtures.ITEM_ID], **cfg}
+        new, _ = self.run_export()
+        self.assertEqual(self.read('plugins/home-screen-sections.json')['DefaultVideos'],
+                         [fixtures.ITEM_ID])
+        self.assertFalse([k for k in new if k.startswith('HEX_')])
+
     def test_new_env_holds_real_values(self):
         new, _ = self.run_export()
         self.assertEqual(new['HOME_SCREEN_SECTIONS_SONARR_APIKEY'], fixtures.SONARR_KEY)

@@ -23,6 +23,12 @@ class ScanTextTest(unittest.TestCase):
         self.assertEqual(found, [(2, '.env value'), (3, 'private IP'), (4, 'email'),
                                  (5, 'unlisted id or key')])
 
+    def test_env_value_matches_whole_words_only(self):
+        self.assertEqual(check_secrets.scan_text('TITLE "Zorbleton" QuxPlorbState',
+                                                 ['bleton', 'lorb'], set()), [])
+        self.assertEqual(check_secrets.scan_text('"Owner": "bleton", x?token=lorb&y=1',
+                                                 ['bleton', 'lorb'], set()), [(1, '.env value')])
+
     def test_allowlisted_id_passes(self):
         self.assertEqual(check_secrets.scan_text(fixtures.ITEM_ID, [], {fixtures.ITEM_ID}), [])
 

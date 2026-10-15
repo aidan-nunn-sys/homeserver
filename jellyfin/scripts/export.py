@@ -18,56 +18,74 @@ def plugin_filename(name):
 
 
 def export(client, env, out_dir):
-    info = client.get('System/Info')
-    users = [(u['Name'], u['Id']) for u in client.get('Users')]
-    libraries = sorted(client.get('Library/VirtualFolders'), key=lambda lib: lib['Name'])
-    domains = [d.strip() for d in env.get('PRIVATE_DOMAINS', '').split(',') if d.strip()]
-    s = Sanitizer(env, domains=domains, users=users,
-                  libraries=[(lib['Name'], lib['ItemId']) for lib in libraries],
-                  literals={'MEDIA_ROOT': env.get('MEDIA_ROOT', ''),
-                            'JELLYFIN_DATA': info.get('ProgramDataPath', '')})
+    raw, skipped = fetch(client)
+    # Two passes: an item ID kept in an *Id field must also be kept wherever
+    # else it appears (e.g. a list named DefaultLocalVideos), whatever the order.
+    first = sanitizer(raw, env)
+    sanitize_all(first, raw)
+    s = sanitizer(raw, env, known_ids=first.kept_ids)
+    files, css = sanitize_all(s, raw)
+    write(out_dir, files, css)
+    return s.new, skipped
 
-    files = {}
-    files['server.json'] = s.sanitize(
-        {'Version': info['Version'], 'Configuration': client.get('System/Configuration')}, 'server')
-    files['repositories.json'] = s.sanitize(client.get('Repositories'), 'repositories')
 
-    plugins = sorted(client.get('Plugins'), key=lambda p: (p['Name'], p['Version']))
-    files['plugins.json'] = s.sanitize(
-        [{k: p.get(k) for k in ('Name', 'Id', 'Version', 'Status')} for p in plugins], 'plugins')
-    skipped = []
-    for p in plugins:
+def fetch(client):
+    raw = {'info': client.get('System/Info'),
+           'users': [(u['Name'], u['Id']) for u in client.get('Users')],
+           'libraries': sorted(client.get('Library/VirtualFolders'), key=lambda lib: lib['Name'])}
+    raw['config'] = client.get('System/Configuration')
+    raw['repositories'] = client.get('Repositories')
+    raw['plugins'] = sorted(client.get('Plugins'), key=lambda p: (p['Name'], p['Version']))
+    raw['plugin_configs'], skipped = {}, []
+    for p in raw['plugins']:
         if p['Status'] == 'Superseded':
             continue
         try:
-            config = client.get(f"Plugins/{p['Id']}/Configuration")
+            raw['plugin_configs'][p['Name']] = client.get(f"Plugins/{p['Id']}/Configuration")
         except ApiError:
             skipped.append(p['Name'])
-            continue
-        files['plugins/' + plugin_filename(p['Name'])] = s.sanitize(config, p['Name'])
+    raw['branding'] = client.get('System/Configuration/branding')
+    raw['tasks'] = sorted(client.get('ScheduledTasks'), key=lambda t: t['Key'])
+    raw['display'] = {name: client.get(f'DisplayPreferences/usersettings?userId={uid}&client=emby')
+                      for name, uid in raw['users']}
+    return raw, skipped
 
-    branding = s.sanitize(client.get('System/Configuration/branding'), 'branding')
+
+def sanitizer(raw, env, known_ids=()):
+    domains = [d.strip() for d in env.get('PRIVATE_DOMAINS', '').split(',') if d.strip()]
+    return Sanitizer(env, domains=domains, users=raw['users'],
+                     libraries=[(lib['Name'], lib['ItemId']) for lib in raw['libraries']],
+                     literals={'MEDIA_ROOT': env.get('MEDIA_ROOT', ''),
+                               'JELLYFIN_DATA': raw['info'].get('ProgramDataPath', '')},
+                     known_ids=known_ids)
+
+
+def sanitize_all(s, raw):
+    files = {}
+    files['server.json'] = s.sanitize(
+        {'Version': raw['info']['Version'], 'Configuration': raw['config']}, 'server')
+    files['repositories.json'] = s.sanitize(raw['repositories'], 'repositories')
+    files['plugins.json'] = s.sanitize(
+        [{k: p.get(k) for k in ('Name', 'Id', 'Version', 'Status')} for p in raw['plugins']], 'plugins')
+    for name, config in raw['plugin_configs'].items():
+        files['plugins/' + plugin_filename(name)] = s.sanitize(config, name)
+
+    branding = s.sanitize(raw['branding'], 'branding')
     css = branding.pop('CustomCss', None) or ''
     files['branding.json'] = branding
 
     files['libraries.json'] = s.sanitize([
         {'Name': lib['Name'], 'CollectionType': lib.get('CollectionType'),
          'Locations': lib.get('Locations', []), 'LibraryOptions': lib.get('LibraryOptions', {})}
-        for lib in libraries], 'libraries')
-
-    tasks = sorted(client.get('ScheduledTasks'), key=lambda t: t['Key'])
+        for lib in raw['libraries']], 'libraries')
     files['tasks.json'] = s.sanitize(
-        [{'Key': t['Key'], 'Name': t['Name'], 'Triggers': t.get('Triggers', [])} for t in tasks],
+        [{'Key': t['Key'], 'Name': t['Name'], 'Triggers': t.get('Triggers', [])} for t in raw['tasks']],
         'tasks')
-
-    display = {name: client.get(f'DisplayPreferences/usersettings?userId={uid}&client=emby')
-               for name, uid in users}
-    files['users-display.json'] = s.sanitize(display, 'users')
+    files['users-display.json'] = s.sanitize(raw['display'], 'users')
 
     files['placeholders.json'] = sorted(s.used)
     files['ids-allowlist.json'] = sorted(s.kept_ids)
-    write(out_dir, files, css)
-    return s.new, skipped
+    return files, css
 
 
 def write(out_dir, files, css):

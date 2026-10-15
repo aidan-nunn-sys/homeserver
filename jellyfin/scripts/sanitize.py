@@ -42,8 +42,9 @@ def fill(obj, values):
 
 
 class Sanitizer:
-    def __init__(self, env, domains=(), users=(), libraries=(), literals=None):
+    def __init__(self, env, domains=(), users=(), libraries=(), literals=None, known_ids=()):
         self.env = dict(env)
+        self._known_ids = set(known_ids)
         self.new = {}
         self.used = set()
         self.kept_ids = set()
@@ -135,7 +136,7 @@ class Sanitizer:
         suffix = 'GUID' if '-' in text else 'ID'
         if guid in self._ids:
             return self._ph(f'{self._ids[guid]}_{suffix}')
-        if is_key or ID_FIELD.search(field):
+        if is_key or ID_FIELD.search(field) or guid in self._known_ids:
             self.kept_ids.add(guid)
             return text
         return self._ph(self._name_for(text, 'HEX'))
