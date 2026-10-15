@@ -31,9 +31,15 @@ class Handler(BaseHTTPRequestHandler):
         self._send(404)
 
     def do_POST(self):
-        length = int(self.headers.get('Content-Length', 0))
-        self.server.last_body = json.loads(self.rfile.read(length))
+        if 'Content-Length' not in self.headers:
+            return self._send(411)
+        raw = self.rfile.read(int(self.headers['Content-Length']))
+        self.server.last_body = json.loads(raw) if raw else None
         self._send(204)
+
+    def do_DELETE(self):
+        self.server.last_delete = self.path
+        self._send(204 if self.path == '/Items/x/Images/Primary' else 404)
 
 
 class ClientTest(unittest.TestCase):
@@ -59,6 +65,17 @@ class ClientTest(unittest.TestCase):
         self.assertIsNone(Client(self.url, 'k1').post('/Things', {'a': 1}))
         self.assertEqual(self.server.last_body, {'a': 1})
 
+
+    def test_post_without_body_sends_empty_content(self):
+        self.assertIsNone(Client(self.url, 'k1').post('Items/x/Refresh', None))
+        self.assertIsNone(self.server.last_body)
+
+    def test_delete(self):
+        self.assertIsNone(Client(self.url, 'k1').delete('Items/x/Images/Primary'))
+        self.assertEqual(self.server.last_delete, '/Items/x/Images/Primary')
+        with self.assertRaises(ApiError) as ctx:
+            Client(self.url, 'k1').delete('Items/y/Images/Primary')
+        self.assertEqual(str(ctx.exception), 'DELETE Items/y/Images/Primary -> HTTP 404')
 
 if __name__ == '__main__':
     unittest.main()

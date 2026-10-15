@@ -20,6 +20,9 @@ class Client:
     def post(self, path, body):
         return self._request('POST', path, body)
 
+    def delete(self, path):
+        return self._request('DELETE', path)
+
     def _request(self, method, path, body=None):
         path = path.lstrip('/')
         data = None if body is None else json.dumps(body).encode()
@@ -32,5 +35,6 @@ class Client:
             with urllib.request.urlopen(req, timeout=self.timeout) as resp:
                 raw = resp.read()
         except urllib.error.HTTPError as e:
+            e.close()
             raise ApiError(f'{method} {path.split("?")[0]} -> HTTP {e.code}') from None
         return json.loads(raw) if raw else None

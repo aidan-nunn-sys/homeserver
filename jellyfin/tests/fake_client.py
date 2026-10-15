@@ -10,6 +10,7 @@ class FakeClient:
     def __init__(self, responses):
         self.responses = responses
         self.posts = []
+        self.deletes = []
 
     def get(self, path):
         if path not in self.responses:
@@ -19,3 +20,9 @@ class FakeClient:
     def post(self, path, body):
         self.posts.append((path, copy.deepcopy(body)))
         self.responses[path] = copy.deepcopy(body)
+
+    def delete(self, path):
+        self.deletes.append(path)
+        if path not in self.responses:
+            raise ApiError(f'DELETE {path} -> HTTP 404')
+        del self.responses[path]

@@ -35,6 +35,11 @@ To undo: `git revert <commit>`, then
 `python3 jellyfin/scripts/restore.py` (dry run) and `--apply`.
 If the change installed a plugin, uninstall it in Dashboard → Plugins and restart.
 
+## Custom additions
+
+- [`custom/tile-rotator/`](custom/tile-rotator/README.md): gives the library
+  tiles a new random backdrop every 6 hours (runs as a container on the LAN).
+
 ## Rebuilding a server from scratch
 
 1. Install the Jellyfin version in `snapshot/server.json` (`Version`).
