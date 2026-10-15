@@ -1,0 +1,408 @@
+[
+  {
+    "Key": "AudioNormalization",
+    "Name": "Audio Normalization",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "AutoCollections",
+    "Name": "Auto Collections",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "CPBIntroSkipperCleanCache",
+    "Name": "Clean Intro Skipper Cache",
+    "Triggers": []
+  },
+  {
+    "Key": "CleanActivityLog",
+    "Name": "Clean Activity Log",
+    "Triggers": []
+  },
+  {
+    "Key": "CleanCollectionsAndPlaylists",
+    "Name": "Clean up collections and playlists",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "CleanLogFiles",
+    "Name": "Clean Log Directory",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "CleanOldSessions",
+    "Name": "Clean Old Sessions",
+    "Triggers": []
+  },
+  {
+    "Key": "CleanupUserDataTask",
+    "Name": "User data cleanup task",
+    "Triggers": []
+  },
+  {
+    "Key": "DeleteCacheFiles",
+    "Name": "Clean Cache Directory",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "DeleteTranscodeFiles",
+    "Name": "Clean Transcode Directory",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      },
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "DownloadLyrics",
+    "Name": "Download missing lyrics",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "DownloadSubtitles",
+    "Name": "Download missing subtitles",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "IntroSkipperDetectSegmentsTask",
+    "Name": "Detect and Analyze Media Segments",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 0,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JavaScriptInjectorStartup",
+    "Name": "JavaScript Injector Startup",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyTweaksStartup",
+    "Name": "Jellyfin Tweaks Startup",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      },
+      {
+        "TimeOfDayTicks": 432000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "Jellyfin.Plugin.CollectionSections.Startup",
+    "Name": "CollectionSections Startup",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "Jellyfin.Plugin.HomeScreenSections.DailyTranslationCache",
+    "Name": "HSS Daily Translation Cache",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      },
+      {
+        "TimeOfDayTicks": 108000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "Jellyfin.Plugin.HomeScreenSections.ImageCacheCleanup",
+    "Name": "Home Sections Image Cache Cleanup",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 108000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "Jellyfin.Plugin.HomeScreenSections.Startup",
+    "Name": "HomeScreenSections Startup",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedAnalyticsReport",
+    "Name": "Send Anonymous Usage Report",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedArrTagsSync",
+    "Name": "Sync Tags from *arr to Jellyfin",
+    "Triggers": []
+  },
+  {
+    "Key": "JellyfinEnhancedAudioLanguageTagsSync",
+    "Name": "Sync Audio Language Tags to Jellyfin",
+    "Triggers": []
+  },
+  {
+    "Key": "JellyfinEnhancedBuildTagCache",
+    "Name": "Refresh Tag Cache",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 108000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedClearTranslationCache",
+    "Name": "Refresh Translation Cache",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedJellyfinToSeerrWatchlistSync",
+    "Name": "Sync Watchlist from Jellyfin to Seerr",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 126000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedJellyseerrUserImport",
+    "Name": "Import Jellyfin Users to Seerr",
+    "Triggers": [
+      {
+        "IntervalTicks": 216000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedJellyseerrWatchlistSync",
+    "Name": "Sync Watchlist from Seerr to Jellyfin",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 108000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedMdblistRatingsFetch",
+    "Name": "Fetch Ratings from MDBList",
+    "Triggers": []
+  },
+  {
+    "Key": "JellyfinEnhancedMdblistRatingsSync",
+    "Name": "Sync Ratings from MDBList to Jellyfin",
+    "Triggers": []
+  },
+  {
+    "Key": "JellyfinEnhancedRefreshCdnAssets",
+    "Name": "Refresh CDN Assets",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      },
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedSpoilerApplyExistingTitles",
+    "Name": "Spoiler Guard: apply to existing titles",
+    "Triggers": []
+  },
+  {
+    "Key": "JellyfinEnhancedStartup",
+    "Name": "Jellyfin Enhanced Startup",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "KeyframeExtraction",
+    "Name": "Keyframe Extractor",
+    "Triggers": []
+  },
+  {
+    "Key": "MoveTrickplayImages",
+    "Name": "Migrate Trickplay Image Location",
+    "Triggers": []
+  },
+  {
+    "Key": "OptimizeDatabaseTask",
+    "Name": "Optimize database",
+    "Triggers": [
+      {
+        "IntervalTicks": 216000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "PlaybackHistoryRunBackup",
+    "Name": "Playback Reporting Run Backup",
+    "Triggers": [
+      {
+        "DayOfWeek": "Sunday",
+        "TimeOfDayTicks": 108000000000,
+        "Type": "WeeklyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "PlaybackHistoryTrimTask",
+    "Name": "Playback Reporting Trim Db",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 0,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "PluginUpdates",
+    "Name": "Update Plugins",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      },
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "RefreshChapterImages",
+    "Name": "Extract Chapter Images",
+    "Triggers": [
+      {
+        "MaxRuntimeTicks": 144000000000,
+        "TimeOfDayTicks": 72000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "RefreshGuide",
+    "Name": "Refresh Guide",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "RefreshInternetChannels",
+    "Name": "TasksRefreshChannels",
+    "Triggers": [
+      {
+        "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "RefreshLibrary",
+    "Name": "Scan Media Library",
+    "Triggers": [
+      {
+        "IntervalTicks": 432000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "RefreshPeople",
+    "Name": "Refresh People",
+    "Triggers": [
+      {
+        "IntervalTicks": 6048000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "RefreshTrickplayImages",
+    "Name": "Generate Trickplay Images",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 108000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "TaskExtractMediaSegments",
+    "Name": "Media Segment Scan",
+    "Triggers": [
+      {
+        "IntervalTicks": 432000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  }
+]

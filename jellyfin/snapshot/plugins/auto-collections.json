@@ -1,0 +1,164 @@
+{
+  "DeleteOrphanedCollections": false,
+  "ExpressionCollections": [
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Star Wars Universe",
+      "Expression": "TITLE \"Star Wars\" OR TITLE \"Rogue\" OR TITLE \"Episode\" OR TITLE \"Solo\" OR TITLE \"Empire\" OR TITLE \"Jedi\"",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "MCU Universe",
+      "Expression": "(STUDIO \"Marvel Studios\" OR TITLE \"Avengers\" OR TITLE \"Iron Man\" OR TITLE \"Thor\" OR TITLE \"Captain America\" OR TITLE \"Guardians\" OR TITLE \"Ant-Man\" OR TITLE \"Doctor Strange\" OR TITLE \"Black Panther\" OR TITLE \"Black Widow\" OR TITLE \"Shang-Chi\" OR TITLE \"Eternals\") AND NOT (TITLE \"Amazing\" OR TITLE \"Spider-Verse\" OR TITLE \"Wolverine\" OR TITLE \"X-Men\" OR TITLE \"Logan\" OR TITLE \"Venom\" OR YEAR \"2002\" OR YEAR \"2004\" OR YEAR \"2007\" OR (TITLE \"Deadpool\" AND NOT TITLE \"Wolverine\"))",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending"
+    }
+  ],
+  "IsInitialized": true,
+  "TagTitlePairs": [],
+  "Tags": [],
+  "TitleMatchPairs": [
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Harry Potter Series",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Harry Potter"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Pirates Movies",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Pirates"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Fast & Furious Saga",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Fast & Furious"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Jurassic Collection",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Jurassic"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Batman Movies",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Batman"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Dark Knight Trilogy",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Dark Knight"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Spider-Man Movies",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Spider-Man"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Deadpool Movies",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Deadpool"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Terminator Movies",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Terminator"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "The Purge Movies",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Purge"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "The Hangover Trilogy",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Hangover"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Hunger Games Trilogy",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Hunger Games"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Men in Black Trilogy",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Men in Black"
+    },
+    {
+      "CaseSensitive": false,
+      "CollectionName": "Wicked Movies",
+      "ExactMatch": false,
+      "MatchType": "Title",
+      "MediaType": "All",
+      "SortBy": "ReleaseYear",
+      "SortOrder": "Descending",
+      "TitleMatch": "Wicked"
+    }
+  ]
+}

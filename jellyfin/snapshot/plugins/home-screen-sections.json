@@ -1,0 +1,364 @@
+{
+  "AllowUserOverride": true,
+  "CacheBustCounter": 0,
+  "CacheTimeoutSeconds": 86400,
+  "DateDelimiter": "/",
+  "DateFormat": "YYYY/MM/DD",
+  "DefaultBooksLibraryId": "",
+  "DefaultMoviesLibraryId": "",
+  "DefaultMusicLibraryId": "",
+  "DefaultMusicVideosLibraryId": "",
+  "DefaultTVShowsLibraryId": "",
+  "DeveloperMode": false,
+  "Enabled": true,
+  "ImageJpegQuality": 85,
+  "JellyseerrApiKey": "<HOME_SCREEN_SECTIONS_JELLYSEERRAPIKEY>",
+  "JellyseerrExternalUrl": "<DOMAIN_1>",
+  "JellyseerrPreferredLanguages": "en",
+  "JellyseerrUrl": "<HOST_2>:5055",
+  "LazyLoadEnabled": false,
+  "LibreTranslateApiKey": "",
+  "LibreTranslateUrl": "",
+  "Lidarr": {
+    "ApiKey": "",
+    "ConsiderCinemaRelease": false,
+    "ConsiderDigitalRelease": true,
+    "ConsiderPhysicalRelease": false,
+    "UpcomingTimeframeUnit": "Months",
+    "UpcomingTimeframeValue": 6,
+    "Url": ""
+  },
+  "MaxImageCacheEntries": 10000,
+  "MaxImageWidth": 600,
+  "NumSectionsPerPage": 10,
+  "OverrideStreamyfinHome": false,
+  "Radarr": {
+    "ApiKey": "<HOME_SCREEN_SECTIONS_RADARR_APIKEY>",
+    "ConsiderCinemaRelease": false,
+    "ConsiderDigitalRelease": true,
+    "ConsiderPhysicalRelease": false,
+    "UpcomingTimeframeUnit": "Months",
+    "UpcomingTimeframeValue": 3,
+    "Url": "<HOST_2>:7878"
+  },
+  "Readarr": {
+    "ApiKey": "",
+    "ConsiderCinemaRelease": false,
+    "ConsiderDigitalRelease": true,
+    "ConsiderPhysicalRelease": false,
+    "UpcomingTimeframeUnit": "Years",
+    "UpcomingTimeframeValue": 1,
+    "Url": ""
+  },
+  "SectionSettings": [
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 1,
+      "SectionId": "MyMedia",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "ContinueWatching",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "NextUp",
+      "UpperLimit": 1,
+      "ViewMode": "Square"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 2,
+      "SectionId": "ContinueWatchingNextUp",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 3,
+      "SectionId": "RecentlyAddedMovies",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 4,
+      "SectionId": "RecentlyAddedShows",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "RecentlyAddedAlbums",
+      "UpperLimit": 1,
+      "ViewMode": "Square"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "RecentlyAddedArtists",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "RecentlyAddedBooks",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "RecentlyAddedAudioBooks",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "RecentlyAddedMusicVideos",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "LatestMovies",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "LatestShows",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "LatestAlbums",
+      "UpperLimit": 1,
+      "ViewMode": "Square"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "LatestBooks",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "LatestAudioBooks",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "LatestMusicVideo",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 5,
+      "SectionId": "BecauseYouWatched",
+      "UpperLimit": 5,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "LiveTV",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "MyList",
+      "UpperLimit": 1,
+      "ViewMode": "Small"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 7,
+      "SectionId": "WatchAgain",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 6,
+      "SectionId": "Discover",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "DiscoverMovies",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "DiscoverTV",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "UpcomingShows",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "UpcomingMovies",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "UpcomingMusic",
+      "UpperLimit": 1,
+      "ViewMode": "Square"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "UpcomingBooks",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "Genre",
+      "UpperLimit": 5,
+      "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": false,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 999,
+      "SectionId": "MyJellyseerrRequests",
+      "UpperLimit": 1,
+      "ViewMode": "Landscape"
+    }
+  ],
+  "Sonarr": {
+    "ApiKey": "<HOME_SCREEN_SECTIONS_SONARR_APIKEY>",
+    "ConsiderCinemaRelease": false,
+    "ConsiderDigitalRelease": true,
+    "ConsiderPhysicalRelease": false,
+    "UpcomingTimeframeUnit": "Weeks",
+    "UpcomingTimeframeValue": 1,
+    "Url": "<HOST_2>:8989"
+  }
+}

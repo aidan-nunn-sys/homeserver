@@ -1,0 +1,34 @@
+{
+  "CurrentDateIntros": [],
+  "DefaultLocalVideos": [
+    "3fe2650cbb1c4a8b9ffd4105cc84a820"
+  ],
+  "DetectedLocalVideos": [
+    {
+      "ItemId": "0280ee02f08147d3836a89fab0549bb9",
+      "Name": "Ratings Reel Boosted"
+    },
+    {
+      "ItemId": "1cdfb18ab1694fd29896e6c0d44712fb",
+      "Name": "Drive In Boosted"
+    },
+    {
+      "ItemId": "3fe2650cbb1c4a8b9ffd4105cc84a820",
+      "Name": "feature presentation"
+    },
+    {
+      "ItemId": "ace8f38869034a6f9e3f6e332a427a9c",
+      "Name": "Vintage Drive In MPAA \uff02Symbols\uff02 Ratings Reel [mZxavclEzDU]"
+    },
+    {
+      "ItemId": "63e24877b2994343b553ddf2bd154ec6",
+      "Name": "Grindhouse Boosted"
+    }
+  ],
+  "GenreIntros": [],
+  "IntrosForMoviesOnly": false,
+  "Local": "<MEDIA_ROOT>/yt-dl",
+  "PremiereDateIntros": [],
+  "StudioIntros": [],
+  "TagIntros": []
+}

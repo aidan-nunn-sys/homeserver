@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "a629c0dafac54c7e931a7174223f14c8",
+    "Name": "AudioDB",
+    "Status": "Active",
+    "Version": "<HOST_1>"
+  },
+  {
+    "Id": "06ebf4a913264327968d8da00e1ea2eb",
+    "Name": "Auto Collections",
+    "Status": "Active",
+    "Version": "0.0.7.0"
+  },
+  {
+    "Id": "698b6f3314ca49b59d79fc3c0ab941f5",
+    "Name": "Chapter Segments Provider",
+    "Status": "Active",
+    "Version": "4.0.0.0"
+  },
+  {
+    "Id": "043b2c48b3e04610b3988217b146d1a4",
+    "Name": "Collection Sections",
+    "Status": "Active",
+    "Version": "2.3.6.0"
+  },
+  {
+    "Id": "5e87cc92571a4d8d8d98d2d4147f9f90",
+    "Name": "File Transformation",
+    "Status": "Active",
+    "Version": "2.5.5.0"
+  },
+  {
+    "Id": "b8298e012697407ab44daa8dc795e850",
+    "Name": "Home Screen Sections",
+    "Status": "Active",
+    "Version": "2.5.7.0"
+  },
+  {
+    "Id": "c83d86bba1e04c35a113e2101cf4ee6b",
+    "Name": "Intro Skipper",
+    "Status": "Active",
+    "Version": "1.10.11.13"
+  },
+  {
+    "Id": "f5a34f7b2e8a4e6aa7223a216a81b374",
+    "Name": "JavaScript Injector",
+    "Status": "Active",
+    "Version": "4.0.0.0"
+  },
+  {
+    "Id": "f69e946a4b3c4e9a8f0a8d7c1b2c4d9b",
+    "Name": "Jellyfin Enhanced",
+    "Status": "Active",
+    "Version": "12.12.0.0"
+  },
+  {
+    "Id": "dfee382801df49df85b15c2b75e5ea1a",
+    "Name": "Jellyfin Tweaks",
+    "Status": "Active",
+    "Version": "5.0.0.0"
+  },
+  {
+    "Id": "07d8679501f24d22b174cdc6056c3e7c",
+    "Name": "Local Intros",
+    "Status": "Active",
+    "Version": "4.0.0.0"
+  },
+  {
+    "Id": "8c95c4d2e50c4fb0a4f36c06ff0f9a1a",
+    "Name": "MusicBrainz",
+    "Status": "Active",
+    "Version": "<HOST_1>"
+  },
+  {
+    "Id": "a628c0dafac54c7e9d1a7134223f14c8",
+    "Name": "OMDb",
+    "Status": "Active",
+    "Version": "<HOST_1>"
+  },
+  {
+    "Id": "4b9ed42f518548b598036ff2989014c4",
+    "Name": "Open Subtitles",
+    "Status": "Active",
+    "Version": "23.0.0.0"
+  },
+  {
+    "Id": "5c53438191a343cb907a35aa02eb9d2c",
+    "Name": "Playback Reporting",
+    "Status": "Active",
+    "Version": "17.0.0.0"
+  },
+  {
+    "Id": "d4312cd95c904f3882e851da566790e8",
+    "Name": "Reports",
+    "Status": "Active",
+    "Version": "18.0.0.0"
+  },
+  {
+    "Id": "ec9e2a7413114a14b302158e3d95fd1d",
+    "Name": "Session Cleaner",
+    "Status": "Active",
+    "Version": "5.0.0.0"
+  },
+  {
+    "Id": "e9ca8b8eca6d40e785dc58e536df8eb3",
+    "Name": "SkinManager",
+    "Status": "Disabled",
+    "Version": "2.0.2.0"
+  },
+  {
+    "Id": "872a78491171458da6fb3de3d442ad30",
+    "Name": "Studio Images",
+    "Status": "Active",
+    "Version": "<HOST_1>"
+  },
+  {
+    "Id": "b8715ed16c4745289ad3f72deb539cd4",
+    "Name": "TMDb",
+    "Status": "Active",
+    "Version": "<HOST_1>"
+  }
+]

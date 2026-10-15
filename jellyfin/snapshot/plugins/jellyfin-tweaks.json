@@ -1,0 +1,43 @@
+{
+  "BitrateOverrides": [],
+  "DefaultLibraryPageSize": 100,
+  "DesktopDisplayMode": "",
+  "DisableAllTweaks": false,
+  "DisableScriptInjectionMiddleware": false,
+  "EnableBackdropsByDefault": false,
+  "EnableDetailsBannerByDefault": false,
+  "ForceDisableNextVideoInfo": false,
+  "ForceEnableEpisodeImagesInNextUp": false,
+  "ForceEnableRewatchingInNextUp": false,
+  "ForceEnableThemeMusic": false,
+  "ForceEnableThemeVideos": false,
+  "GroupedFolders": [],
+  "HomeSections": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "LandingScreens": [],
+  "LatestItemsExcludes": [],
+  "LibrarySortOverrides": [],
+  "LimitSupportedVideoResolution": false,
+  "ManageGroupedFolders": false,
+  "ManageLatestItemsExcludes": false,
+  "ManageMyMediaExcludes": false,
+  "ManageOrderedViews": false,
+  "MaxDaysNextUp": 365,
+  "MaxVideoWidth": 0,
+  "MobileDisplayMode": "",
+  "MyMediaExcludes": [],
+  "OrderedViews": [],
+  "SubtitleAppearance": {
+    "Enabled": false
+  }
+}

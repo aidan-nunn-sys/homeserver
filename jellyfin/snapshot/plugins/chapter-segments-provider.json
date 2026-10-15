@@ -1,0 +1,7 @@
+{
+  "CustomMappingCommercial": "break|ad|advertisement|intermission|advert|commercial",
+  "CustomMappingIntro": "intro|opening|^OP$",
+  "CustomMappingOutro": "outro|closing|credits|ending|^ED$",
+  "CustomMappingPreview": "preview|next time on|next on|sneak peek",
+  "CustomMappingRecap": "recap|last time on|last on|previously on"
+}

@@ -1,0 +1,5 @@
+{
+  "RateLimit": 1,
+  "ReplaceArtistName": false,
+  "Server": "https://musicbrainz.org"
+}
