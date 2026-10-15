@@ -24,6 +24,7 @@ class Client:
         path = path.lstrip('/')
         data = None if body is None else json.dumps(body).encode()
         req = urllib.request.Request(f'{self.base}/{path}', data=data, method=method)
+        req.add_header('User-Agent', 'jellyfin-config-snapshot/1.0')
         req.add_header('Authorization', f'MediaBrowser Token="{self.key}"')
         if data is not None:
             req.add_header('Content-Type', 'application/json')

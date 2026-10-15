@@ -21,6 +21,9 @@ class Handler(BaseHTTPRequestHandler):
         self.wfile.write(body)
 
     def do_GET(self):
+        # Cloudflare's bot rules reject urllib's default user agent with 403
+        if self.headers.get('User-Agent', '').startswith('Python-urllib'):
+            return self._send(403)
         if self.headers.get('Authorization') != 'MediaBrowser Token="k1"':
             return self._send(401)
         if self.path == '/Items?x=1':
