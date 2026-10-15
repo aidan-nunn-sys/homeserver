@@ -9,6 +9,7 @@ This stack brings together essential services like Home Assistant, Plex, Pi-hole
 
 - 🏡 **Home Assistant** — Full-featured smart home hub  
 - 🎬 **Plex Media Server** — Stream your TV shows and movies  
+- 🍿 **Jellyfin** — Media server; config, plugins and theme tracked in [`jellyfin/`](jellyfin/README.md)
 - 🚫 **Pi-hole** — Network-wide ad-blocking and DNS filtering  
 - 🌐 **Nginx Proxy Manager** — Simple reverse proxy management with SSL
 - 📷 **Immich** — Self-hosted photo and video backup solution  
