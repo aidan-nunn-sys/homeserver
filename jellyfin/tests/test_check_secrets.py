@@ -1,3 +1,5 @@
+import contextlib
+import io
 import subprocess
 import sys
 import tempfile
@@ -55,7 +57,11 @@ class MainTest(unittest.TestCase):
 
     def test_staged_secret_fails(self):
         self.stage('jellyfin/a.json', '{"Key": "' + fixtures.SONARR_KEY + '"}')
-        self.assertEqual(check_secrets.main(['--repo', str(self.repo)]), 1)
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            self.assertEqual(check_secrets.main(['--repo', str(self.repo)]), 1)
+        self.assertIn('jellyfin/a.json:1: .env value', out.getvalue())
+        self.assertNotIn(fixtures.SONARR_KEY, out.getvalue())
 
     def test_files_outside_jellyfin_ignored(self):
         self.stage('other/a.txt', fixtures.IP)
