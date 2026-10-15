@@ -29,6 +29,10 @@ class ScanTextTest(unittest.TestCase):
         self.assertEqual(check_secrets.scan_text('"Owner": "bleton", x?token=lorb&y=1',
                                                  ['bleton', 'lorb'], set()), [(1, '.env value')])
 
+    def test_ip_in_url_flagged_versions_not(self):
+        url = 'http://' + '.'.join(['172', '39', '0', '4']) + ':7878'
+        self.assertEqual(check_secrets.scan_text(url + '\n"1.10.11.13"', [], set()), [(1, 'IP in URL')])
+
     def test_allowlisted_id_passes(self):
         self.assertEqual(check_secrets.scan_text(fixtures.ITEM_ID, [], {fixtures.ITEM_ID}), [])
 

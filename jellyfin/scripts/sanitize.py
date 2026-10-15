@@ -10,6 +10,9 @@ SECRET_QUERY = re.compile(r'([?&](?:api_?key|access_token|token|password)=)([^&\
 PRIVATE_IP = re.compile(
     r'\b(?:10(?:\.\d{1,3}){3}|127(?:\.\d{1,3}){3}|192\.168(?:\.\d{1,3}){2}'
     r'|172\.(?:1[6-9]|2\d|3[01])(?:\.\d{1,3}){2})\b')
+# Any IPv4 host in a URL (e.g. Docker networks outside RFC1918); bare dotted
+# numbers elsewhere are usually version strings.
+URL_IP = re.compile(r'(?<=://)\d{1,3}(?:\.\d{1,3}){3}\b')
 EMAIL = re.compile(r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}')
 GUID = re.compile(
     r'\b(?:[0-9a-fA-F]{32}'
@@ -128,6 +131,7 @@ class Sanitizer:
         for domain in self._domains:
             text = domain.sub(lambda m: self._ph(self._name_for(m.group(0), 'DOMAIN')), text)
         text = PRIVATE_IP.sub(lambda m: self._ph(self._name_for(m.group(0), 'HOST')), text)
+        text = URL_IP.sub(lambda m: self._ph(self._name_for(m.group(0), 'HOST')), text)
         field = next((p for p in reversed(path) if not p.isdigit()), '')
         return GUID.sub(lambda m: self._guid(m.group(0), field, is_key), text)
 

@@ -12,7 +12,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import envfile
-from sanitize import EMAIL, GUID, PRIVATE_IP, norm_guid
+from sanitize import EMAIL, GUID, PRIVATE_IP, URL_IP, norm_guid
 
 ALLOWLIST = 'jellyfin/snapshot/ids-allowlist.json'
 
@@ -32,6 +32,8 @@ def scan_text(text, values, allowlist, check_ids=True):
             findings.append((number, '.env value'))
         if PRIVATE_IP.search(line):
             findings.append((number, 'private IP'))
+        elif URL_IP.search(line):
+            findings.append((number, 'IP in URL'))
         if EMAIL.search(line):
             findings.append((number, 'email'))
         if check_ids and any(norm_guid(m.group(0)) not in allowlist for m in GUID.finditer(line)):

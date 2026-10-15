@@ -61,6 +61,13 @@ class SanitizerTest(unittest.TestCase):
         self.assertEqual(s.new['HOST_1'], IP)
         self.assertEqual(s.new['DOMAIN_1'], 'requests.' + DOMAIN)
 
+    def test_any_ip_in_url_replaced_but_versions_kept(self):
+        docker_ip = '.'.join(['172', '39', '0', '4'])
+        s = make()
+        out = s.sanitize({'Url': 'http://' + docker_ip + ':7878', 'Version': '1.10.11.13'}, 'P')
+        self.assertEqual(out, {'Url': 'http://<HOST_1>:7878', 'Version': '1.10.11.13'})
+        self.assertEqual(s.new['HOST_1'], docker_ip)
+
     def test_users_names_and_ids(self):
         s = make()
         out = s.sanitize({'alice': {'UserId': USER_ID, 'Owner': dashed(USER_ID)}}, 'P')
