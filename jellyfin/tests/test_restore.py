@@ -1,3 +1,5 @@
+import contextlib
+import io
 import json
 import sys
 import tempfile
@@ -87,9 +89,12 @@ class RestoreTest(unittest.TestCase):
         env_path = Path(self.dir.name) / '.env'
         env_path.write_text('\n'.join(f'{k}={v}' for k, v in self.env.items()) + '\n')
         self.client.responses['System/Configuration/branding']['CustomCss'] = ''
-        restore.main(['--env', str(env_path), '--snapshot', str(self.snap), '--apply'],
-                     client=self.client)
+        out = io.StringIO()
+        with contextlib.redirect_stdout(out):
+            restore.main(['--env', str(env_path), '--snapshot', str(self.snap), '--apply'],
+                         client=self.client)
         self.assertEqual([p for p, _ in self.client.posts], ['System/Configuration/branding'])
+        self.assertEqual(out.getvalue(), 'updated: branding\n')
 
 
 if __name__ == '__main__':
