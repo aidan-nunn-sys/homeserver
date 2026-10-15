@@ -1,0 +1,5 @@
+# The repo root ignores *.json, *.css and *.env; re-include config files here.
+!*.json
+!*.css
+.env
+__pycache__/
