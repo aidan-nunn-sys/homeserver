@@ -73,5 +73,25 @@ class MainTest(unittest.TestCase):
         self.assertEqual(check_secrets.main(['--repo', str(self.repo)]), 0)
 
 
+    def test_staged_uses_committed_allowlist(self):
+        self.stage('jellyfin/snapshot/ids-allowlist.json', '["' + fixtures.ITEM_ID + '"]')
+        subprocess.run(['git', '-C', str(self.repo), '-c', 'user.name=t', '-c', 'user.email=t',
+                        'commit', '-qm', 'x', '--no-verify'], check=True)
+        self.stage('jellyfin/snapshot/a.json', '{"Id": "' + fixtures.ITEM_ID + '"}')
+        self.assertEqual(check_secrets.main(['--repo', str(self.repo)]), 0)
+
+    def test_all_uses_working_tree_allowlist(self):
+        self.stage('jellyfin/snapshot/ids-allowlist.json', '[]')
+        self.stage('jellyfin/snapshot/a.json', '{"Id": "' + fixtures.ITEM_ID + '"}')
+        (self.repo / 'jellyfin/snapshot/ids-allowlist.json').write_text('["' + fixtures.ITEM_ID + '"]')
+        self.assertEqual(check_secrets.main(['--all', '--repo', str(self.repo)]), 0)
+
+    def test_all_with_intent_to_add_allowlist(self):
+        (self.repo / 'jellyfin/snapshot').mkdir(parents=True)
+        (self.repo / 'jellyfin/snapshot/ids-allowlist.json').write_text('["' + fixtures.ITEM_ID + '"]')
+        (self.repo / 'jellyfin/snapshot/a.json').write_text('{"Id": "' + fixtures.ITEM_ID + '"}')
+        subprocess.run(['git', '-C', str(self.repo), 'add', '-N', 'jellyfin/snapshot'], check=True)
+        self.assertEqual(check_secrets.main(['--all', '--repo', str(self.repo)]), 0)
+
 if __name__ == '__main__':
     unittest.main()

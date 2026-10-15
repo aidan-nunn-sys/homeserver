@@ -60,8 +60,11 @@ def main(argv=None):
     if not env_path.exists():
         print('warning: jellyfin/.env not found; checking patterns only')
     values = env_values(envfile.load(env_path))
-    listed = git(repo, 'show', f':{ALLOWLIST}')
-    allowlist = {norm_guid(i) for i in json.loads(listed.stdout)} if listed.returncode == 0 else set()
+    if args.all:
+        listed = read(ALLOWLIST) if (repo / ALLOWLIST).exists() else ''
+    else:
+        listed = git(repo, 'show', f':{ALLOWLIST}').stdout
+    allowlist = {norm_guid(i) for i in json.loads(listed or '[]')}
 
     failed = False
     for path in paths:

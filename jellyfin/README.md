@@ -19,7 +19,7 @@ Create the API key in Jellyfin: Dashboard → API Keys → +, name it `config-sn
 
 ```bash
 python3 jellyfin/scripts/export.py
-python3 jellyfin/scripts/check_secrets.py --all
+git add -N jellyfin/snapshot && python3 jellyfin/scripts/check_secrets.py --all
 git add jellyfin/snapshot && git commit -m "jellyfin: snapshot"
 ```
 
