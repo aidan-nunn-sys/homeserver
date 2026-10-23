@@ -39,6 +39,9 @@ If the change installed a plugin, uninstall it in Dashboard → Plugins and rest
 
 - [`custom/tile-rotator/`](custom/tile-rotator/README.md): gives the library
   tiles a new random backdrop every 6 hours (runs as a container on the LAN).
+- [`custom/home-curator/`](custom/home-curator/README.md): refreshes the
+  "Trending Now" collection and the Media Bar's "Featured" playlist daily
+  (systemd timer inside the Jellyfin LXC).
 
 ## Rebuilding a server from scratch
 

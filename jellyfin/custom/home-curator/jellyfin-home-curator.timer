@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily refresh of Jellyfin Top Ten and Media Bar playlist
+
+[Timer]
+OnCalendar=*-*-* 04:15
+OnBootSec=10min
+Persistent=true
+
+[Install]
+WantedBy=timers.target

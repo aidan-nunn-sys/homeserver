@@ -1,0 +1,10 @@
+[Unit]
+Description=Refresh Jellyfin Top Ten collection and Media Bar playlist
+After=jellyfin.service network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/jellyfin-home-curator.env
+ExecStart=/usr/bin/python3 /opt/jellyfin-home-curator/curator.py
+User=jellyfin
