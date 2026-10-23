@@ -20,6 +20,13 @@ This stack brings together essential services like Home Assistant, Plex, Pi-hole
 
 ---
 
+## 📚 Documentation
+
+This repo is the **config-as-code** half of the setup: compose files and placeholder-scrubbed config snapshots that can rebuild the services.
+Design decisions, incident write-ups and runbooks live in a separate **private** repo, `aidan-nunn-sys/homelab`, because they contain environment-specific details.
+
+---
+
 ## 🚀 Getting Started
 
 ### 1. Clone the repo
