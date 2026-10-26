@@ -1,0 +1,14 @@
+[Unit]
+Description=jfa-go (Jellyfin invites and accounts)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=jfa-go
+Group=jfa-go
+ExecStart=/bin/jfa-go -config /etc/jfa-go/config.ini -data /var/lib/jfa-go -host 0.0.0.0 -port 8056
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -40,6 +40,9 @@ If the change installed a plugin, uninstall it in Dashboard → Plugins and rest
 - [`custom/home-curator/`](custom/home-curator/README.md): refreshes the
   "Trending Now" collection and the Media Bar's "Featured" playlist daily
   (systemd timer inside the Jellyfin LXC).
+- [`custom/jfa-go/`](custom/jfa-go/README.md): invite links, self-service
+  signup with email confirmation, My Account and password resets by email
+  (separate LXC; only the viewer pages are public).
 
 ## Rebuilding a server from scratch
 
