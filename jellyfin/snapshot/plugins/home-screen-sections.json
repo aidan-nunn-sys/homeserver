@@ -1,6 +1,6 @@
 {
   "AllowUserOverride": true,
-  "CacheBustCounter": 0,
+  "CacheBustCounter": 1,
   "CacheTimeoutSeconds": 86400,
   "DateDelimiter": "/",
   "DateFormat": "YYYY/MM/DD",
@@ -11,11 +11,12 @@
   "DefaultTVShowsLibraryId": "",
   "DeveloperMode": false,
   "Enabled": true,
+  "FilterUpcomingByLibraryAccess": true,
   "ImageJpegQuality": 85,
   "JellyseerrApiKey": "<HOME_SCREEN_SECTIONS_JELLYSEERRAPIKEY>",
-  "JellyseerrExternalUrl": "<DOMAIN_1>",
+  "JellyseerrExternalUrl": "https://<DOMAIN_1>",
   "JellyseerrPreferredLanguages": "en",
-  "JellyseerrUrl": "<HOST_2>:5055",
+  "JellyseerrUrl": "http://<HOST_2>:5055",
   "LazyLoadEnabled": false,
   "LibreTranslateApiKey": "",
   "LibreTranslateUrl": "",
@@ -30,7 +31,7 @@
   },
   "MaxImageCacheEntries": 10000,
   "MaxImageWidth": 600,
-  "NumSectionsPerPage": 10,
+  "NumSectionsPerPage": 15,
   "OverrideStreamyfinHome": false,
   "Radarr": {
     "ApiKey": "<HOME_SCREEN_SECTIONS_RADARR_APIKEY>",
@@ -56,7 +57,8 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 1,
+      "OrderIndex": 12,
+      "PluginConfigurations": [],
       "SectionId": "MyMedia",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -67,6 +69,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "ContinueWatching",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -77,6 +80,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "NextUp",
       "UpperLimit": 1,
       "ViewMode": "Square"
@@ -86,7 +90,8 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 2,
+      "OrderIndex": 1,
+      "PluginConfigurations": [],
       "SectionId": "ContinueWatchingNextUp",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -96,7 +101,8 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 3,
+      "OrderIndex": 5,
+      "PluginConfigurations": [],
       "SectionId": "RecentlyAddedMovies",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -106,7 +112,8 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 4,
+      "OrderIndex": 6,
+      "PluginConfigurations": [],
       "SectionId": "RecentlyAddedShows",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -117,6 +124,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "RecentlyAddedAlbums",
       "UpperLimit": 1,
       "ViewMode": "Square"
@@ -127,6 +135,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "RecentlyAddedArtists",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -137,6 +146,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "RecentlyAddedBooks",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -147,6 +157,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "RecentlyAddedAudioBooks",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -157,6 +168,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "RecentlyAddedMusicVideos",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -167,6 +179,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "LatestMovies",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -177,6 +190,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "LatestShows",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -187,6 +201,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "LatestAlbums",
       "UpperLimit": 1,
       "ViewMode": "Square"
@@ -197,6 +212,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "LatestBooks",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -207,6 +223,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "LatestAudioBooks",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -217,6 +234,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "LatestMusicVideo",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -226,9 +244,10 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 5,
+      "OrderIndex": 4,
+      "PluginConfigurations": [],
       "SectionId": "BecauseYouWatched",
-      "UpperLimit": 5,
+      "UpperLimit": 2,
       "ViewMode": "Landscape"
     },
     {
@@ -237,6 +256,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "LiveTV",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
@@ -246,7 +266,8 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 999,
+      "OrderIndex": 13,
+      "PluginConfigurations": [],
       "SectionId": "MyList",
       "UpperLimit": 1,
       "ViewMode": "Small"
@@ -256,7 +277,8 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 7,
+      "OrderIndex": 11,
+      "PluginConfigurations": [],
       "SectionId": "WatchAgain",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -266,7 +288,8 @@
       "Enabled": true,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 6,
+      "OrderIndex": 3,
+      "PluginConfigurations": [],
       "SectionId": "Discover",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -276,9 +299,10 @@
       "Enabled": false,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 999,
+      "OrderIndex": 4,
+      "PluginConfigurations": [],
       "SectionId": "DiscoverMovies",
-      "UpperLimit": 1,
+      "UpperLimit": 20,
       "ViewMode": "Portrait"
     },
     {
@@ -286,9 +310,10 @@
       "Enabled": false,
       "HideWatchedItems": false,
       "LowerLimit": 1,
-      "OrderIndex": 999,
+      "OrderIndex": 5,
+      "PluginConfigurations": [],
       "SectionId": "DiscoverTV",
-      "UpperLimit": 1,
+      "UpperLimit": 20,
       "ViewMode": "Portrait"
     },
     {
@@ -297,6 +322,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "UpcomingShows",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -307,6 +333,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "UpcomingMovies",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -317,6 +344,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "UpcomingMusic",
       "UpperLimit": 1,
       "ViewMode": "Square"
@@ -327,6 +355,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "UpcomingBooks",
       "UpperLimit": 1,
       "ViewMode": "Portrait"
@@ -337,6 +366,7 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "Genre",
       "UpperLimit": 5,
       "ViewMode": "Landscape"
@@ -347,9 +377,76 @@
       "HideWatchedItems": false,
       "LowerLimit": 1,
       "OrderIndex": 999,
+      "PluginConfigurations": [],
       "SectionId": "MyJellyseerrRequests",
       "UpperLimit": 1,
       "ViewMode": "Landscape"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": false,
+      "HideWatchedItems": false,
+      "LowerLimit": 2,
+      "OrderIndex": 999,
+      "PluginConfigurations": [],
+      "SectionId": "TopTen",
+      "UpperLimit": 2,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": true,
+      "LowerLimit": 1,
+      "OrderIndex": 7,
+      "PluginConfigurations": [],
+      "SectionId": "HiddenGems",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 8,
+      "PluginConfigurations": [],
+      "SectionId": "Decade",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 9,
+      "PluginConfigurations": [],
+      "SectionId": "Studio",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 10,
+      "PluginConfigurations": [],
+      "SectionId": "FinishTheseCollections",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
+    },
+    {
+      "AllowUserOverride": true,
+      "Enabled": true,
+      "HideWatchedItems": false,
+      "LowerLimit": 1,
+      "OrderIndex": 2,
+      "PluginConfigurations": [],
+      "SectionId": "TrendingNow",
+      "UpperLimit": 1,
+      "ViewMode": "Portrait"
     }
   ],
   "Sonarr": {

@@ -29,6 +29,11 @@ class ScanTextTest(unittest.TestCase):
         self.assertEqual(check_secrets.scan_text('"Owner": "bleton", x?token=lorb&y=1',
                                                  ['bleton', 'lorb'], set()), [(1, '.env value')])
 
+    def test_version_line_starting_with_10_not_flagged(self):
+        ten = '.'.join(['10', '0', '0', '9'])
+        text = '    "Version": "10.11.5.0"\n  "TargetAbi": "10.11.0.0",\n"Host": "' + ten + '"'
+        self.assertEqual(check_secrets.scan_text(text, [], set()), [(3, 'private IP')])
+
     def test_ip_in_url_flagged_versions_not(self):
         url = 'http://' + '.'.join(['172', '39', '0', '4']) + ':7878'
         self.assertEqual(check_secrets.scan_text(url + '\n"1.10.11.13"', [], set()), [(1, 'IP in URL')])

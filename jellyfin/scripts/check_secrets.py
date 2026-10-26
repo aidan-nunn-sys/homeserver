@@ -15,6 +15,8 @@ import envfile
 from sanitize import EMAIL, GUID, PRIVATE_IP, URL_IP, norm_guid
 
 ALLOWLIST = 'jellyfin/snapshot/ids-allowlist.json'
+# "Version": "10.11.5.0" is a version, not a 10.x.x.x address.
+VERSION_VALUE = re.compile(r'"[A-Za-z]*(?:Version|Abi)":\s*"[0-9.]+"', re.I)
 
 
 def env_values(env):
@@ -30,7 +32,7 @@ def scan_text(text, values, allowlist, check_ids=True):
     for number, line in enumerate(text.splitlines(), 1):
         if any(re.search(r'(?<![A-Za-z0-9])' + re.escape(v) + r'(?![A-Za-z0-9])', line) for v in values):
             findings.append((number, '.env value'))
-        if PRIVATE_IP.search(line):
+        if PRIVATE_IP.search(VERSION_VALUE.sub('', line)):
             findings.append((number, 'private IP'))
         elif URL_IP.search(line):
             findings.append((number, 'IP in URL'))

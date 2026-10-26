@@ -1,1 +1,4 @@
-@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@main/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");
+@import url("https://cdn.jsdelivr.net/gh/lscambo13/ElegantFin@v26.09.05/Theme/ElegantFin-jellyfin-theme-build-latest-minified.css");
+
+/* Trending Now is a curated list, not a movie series: keep it out of "Finish These Collections". */
+.FinishTheseCollections .card[data-path$="/Trending Now [boxset]"] { display: none; }

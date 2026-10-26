@@ -1,0 +1,23 @@
+{
+  "AllowUnpinnedRefs": false,
+  "AvatarsPlaylist": "Featured",
+  "Enabled": "Enabled",
+  "UseAvatarsFile": false,
+  "VersionString": "embedded",
+  "WebConfig": {
+    "EnableTrailers": true,
+    "FadeTransitionDuration": -1,
+    "ImageSvgs": {},
+    "LoadingCheckInterval": -1,
+    "MaxItems": -1,
+    "MaxMovies": -1,
+    "MaxPlotLength": -1,
+    "MaxTvShows": -1,
+    "MinSwipeDistance": -1,
+    "PreloadCount": -1,
+    "RetryInterval": -1,
+    "ShuffleInterval": -1,
+    "SlideAnimationEnabled": true,
+    "SyncPageBackdrop": false
+  }
+}

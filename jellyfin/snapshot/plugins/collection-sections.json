@@ -1,3 +1,10 @@
 {
-  "Sections": []
+  "Sections": [
+    {
+      "CollectionName": "Trending Now",
+      "DisplayText": "Trending Now",
+      "SectionType": "Collection",
+      "UniqueId": "TrendingNow"
+    }
+  ]
 }

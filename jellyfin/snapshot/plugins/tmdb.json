@@ -1,11 +1,16 @@
 {
+  "BackdropSize": "original",
   "ExcludeTagsMovies": false,
   "ExcludeTagsSeries": false,
   "HideMissingCastMembers": false,
   "HideMissingCrewMembers": false,
   "ImportSeasonName": false,
   "IncludeAdult": false,
+  "LogoSize": "original",
   "MaxCastMembers": 15,
   "MaxCrewMembers": 15,
+  "PosterSize": "original",
+  "ProfileSize": "original",
+  "StillSize": "original",
   "TmdbApiKey": ""
 }

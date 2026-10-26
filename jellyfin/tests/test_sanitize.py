@@ -61,6 +61,17 @@ class SanitizerTest(unittest.TestCase):
         self.assertEqual(s.new['HOST_1'], IP)
         self.assertEqual(s.new['DOMAIN_1'], 'requests.' + DOMAIN)
 
+    def test_version_starting_with_10_is_not_an_ip(self):
+        version, abi = '.'.join(['10', '11', '5', '0']), '.'.join(['10', '11', '0', '0'])
+        s = make()
+        out = s.sanitize([{'Version': version}, {'TargetAbi': abi}], 'plugins')
+        self.assertEqual(out, [{'Version': version}, {'TargetAbi': abi}])
+        self.assertFalse([k for k in s.new if k.startswith('HOST_')])
+
+    def test_private_ip_in_other_fields_still_replaced(self):
+        ten = '.'.join(['10', '0', '0', '9'])
+        self.assertEqual(make().sanitize({'Host': ten}, 'P'), {'Host': '<HOST_1>'})
+
     def test_any_ip_in_url_replaced_but_versions_kept(self):
         docker_ip = '.'.join(['172', '39', '0', '4'])
         s = make()

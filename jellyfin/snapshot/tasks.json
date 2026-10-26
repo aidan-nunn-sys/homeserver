@@ -175,6 +175,15 @@
     ]
   },
   {
+    "Key": "Jellyfin.Plugin.MediaBar.Startup",
+    "Name": "MediaBar Startup",
+    "Triggers": [
+      {
+        "Type": "StartupTrigger"
+      }
+    ]
+  },
+  {
     "Key": "JellyfinEnhancedAnalyticsReport",
     "Name": "Send Anonymous Usage Report",
     "Triggers": [

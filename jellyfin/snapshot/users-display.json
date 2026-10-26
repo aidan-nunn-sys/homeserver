@@ -8,7 +8,8 @@
       "enableNextVideoInfoOverlay": "False",
       "skipBackLength": "10000",
       "skipForwardLength": "30000",
-      "tvhome": null
+      "tvhome": null,
+      "useEpisodeImagesInNextUpAndResume": "false"
     },
     "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
     "PrimaryImageHeight": 250,
@@ -101,6 +102,49 @@
     "SortBy": "SortName",
     "SortOrder": "Ascending"
   },
+  "<USER_14>": {
+    "Client": "emby",
+    "CustomPrefs": {
+      "chromecastVersion": "stable",
+      "dashboardTheme": null,
+      "enableNextVideoInfoOverlay": "False",
+      "skipBackLength": "10000",
+      "skipForwardLength": "30000",
+      "tvhome": null
+    },
+    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
+    "PrimaryImageHeight": 250,
+    "PrimaryImageWidth": 250,
+    "RememberIndexing": false,
+    "RememberSorting": false,
+    "ScrollDirection": "Horizontal",
+    "ShowBackdrop": true,
+    "ShowSidebar": false,
+    "SortBy": "SortName",
+    "SortOrder": "Ascending"
+  },
+  "<USER_15>": {
+    "Client": "emby",
+    "CustomPrefs": {
+      "<LIBRARY_SHOWS_ID>-series": "{\"SortBy\":\"SortName\",\"SortOrder\":\"Ascending\"}",
+      "chromecastVersion": "stable",
+      "dashboardTheme": null,
+      "enableNextVideoInfoOverlay": "False",
+      "skipBackLength": "10000",
+      "skipForwardLength": "30000",
+      "tvhome": null
+    },
+    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
+    "PrimaryImageHeight": 250,
+    "PrimaryImageWidth": 250,
+    "RememberIndexing": false,
+    "RememberSorting": false,
+    "ScrollDirection": "Horizontal",
+    "ShowBackdrop": true,
+    "ShowSidebar": false,
+    "SortBy": "SortName",
+    "SortOrder": "Ascending"
+  },
   "<USER_1>": {
     "Client": "emby",
     "CustomPrefs": {
@@ -151,7 +195,8 @@
       "enableNextVideoInfoOverlay": "False",
       "skipBackLength": "10000",
       "skipForwardLength": "30000",
-      "tvhome": null
+      "tvhome": null,
+      "useEpisodeImagesInNextUpAndResume": "false"
     },
     "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
     "PrimaryImageHeight": 250,

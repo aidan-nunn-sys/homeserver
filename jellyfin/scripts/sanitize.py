@@ -19,6 +19,8 @@ GUID = re.compile(
     r'|[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12})\b')
 PLACEHOLDER = re.compile(r'<([A-Z][A-Z0-9_]*)>')
 ID_FIELD = re.compile(r'ids?$', re.I)
+# Plugin versions (10.x.x.x) look like private addresses.
+VERSION_FIELD = re.compile(r'version|abi$', re.I)
 
 
 def slug(text):
@@ -130,9 +132,10 @@ class Sanitizer:
         text = EMAIL.sub(lambda m: self._ph(self._name_for(m.group(0), 'EMAIL')), text)
         for domain in self._domains:
             text = domain.sub(lambda m: self._ph(self._name_for(m.group(0), 'DOMAIN')), text)
-        text = PRIVATE_IP.sub(lambda m: self._ph(self._name_for(m.group(0), 'HOST')), text)
-        text = URL_IP.sub(lambda m: self._ph(self._name_for(m.group(0), 'HOST')), text)
         field = next((p for p in reversed(path) if not p.isdigit()), '')
+        if not VERSION_FIELD.search(field):
+            text = PRIVATE_IP.sub(lambda m: self._ph(self._name_for(m.group(0), 'HOST')), text)
+        text = URL_IP.sub(lambda m: self._ph(self._name_for(m.group(0), 'HOST')), text)
         return GUID.sub(lambda m: self._guid(m.group(0), field, is_key), text)
 
     def _guid(self, text, field, is_key):
