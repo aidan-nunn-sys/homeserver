@@ -10,20 +10,27 @@ from sanitize import SECRET_KEY, Sanitizer
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTEXT = 'jfa'
+# jfa-go writes a few keys (first_run, ...) before any [section].
+TOP = '__top__'
+# Values that identify the owner but sit under ordinary-looking keys.
+IDENTIFYING = [('smtp', 'username'), ('invite_emails', 'subject')]
 
 
 def export_ini(text, sanitizer):
     parser = configparser.ConfigParser(interpolation=None)
     parser.optionxform = str
-    parser.read_string(text)
+    parser.read_string(f'[{TOP}]\n' + text)
     raw = {section: dict(parser[section]) for section in parser.sections()}
+    for section, key in IDENTIFYING:
+        if raw.get(section, {}).get(key):
+            raw[section][key] = sanitizer.secret([CONTEXT, section, key], raw[section][key])
     clean = sanitizer.sanitize(raw, CONTEXT)
     out = configparser.ConfigParser(interpolation=None)
     out.optionxform = str
     out.read_dict(clean)
     buf = io.StringIO()
     out.write(buf)
-    return buf.getvalue()
+    return buf.getvalue().replace(f'[{TOP}]\n', '', 1)
 
 
 def secret_names(new):

@@ -40,6 +40,30 @@ class ExportIniTest(unittest.TestCase):
         out = export_ini('[b]\nx = 1\n\n[a]\ny = 2\n', make())
         self.assertLess(out.index('[b]'), out.index('[a]'))
 
+    def test_keys_before_first_section_kept_on_top(self):
+        out = export_ini('first_run = false\n\n[ui]\nx = 1\n', make())
+        self.assertTrue(out.startswith('first_run = false\n'))
+        self.assertLess(out.index('first_run'), out.index('[ui]'))
+
+    def test_boolean_under_secret_key_kept(self):
+        out = export_ini('[password_resets]\nset_password = true\n', make())
+        self.assertIn('set_password = true', out)
+
+    def test_smtp_username_hidden_but_saved(self):
+        name = 'mail-' + 'owner'
+        s = make()
+        out = export_ini(f'[smtp]\nusername = {name}\n', s)
+        self.assertIn('username = <JFA_SMTP_USERNAME>', out)
+        self.assertNotIn(name, out)
+        self.assertEqual(s.new['JFA_SMTP_USERNAME'], name)
+        self.assertNotIn('JFA_SMTP_USERNAME', secret_names(s.new))
+
+    def test_invite_subject_hidden(self):
+        subject = 'Owner' + ' invited you'
+        out = export_ini(f'[invite_emails]\nsubject = {subject}\n', make())
+        self.assertIn('subject = <JFA_INVITE_EMAILS_SUBJECT>', out)
+        self.assertNotIn(subject, out)
+
     def test_secrets_not_returned_for_saving(self):
         s = make()
         export_ini(f'[email]\npassword = x\n[jellyfin]\nserver = http://{IP}\n', s)

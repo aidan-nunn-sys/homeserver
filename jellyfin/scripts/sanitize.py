@@ -78,6 +78,10 @@ class Sanitizer:
     def sanitize(self, obj, context):
         return self._walk(obj, [slug(context)])
 
+    def secret(self, path, value):
+        """Hide a value whose key doesn't look secret (e.g. a login name)."""
+        return self._secret([slug(part) for part in path], value)
+
     def _remember(self, name, value):
         if self.env.get(name) != value:
             self.env[name] = value
@@ -109,7 +113,8 @@ class Sanitizer:
             for key, value in obj.items():
                 new_key = self._text(key, path + [key], is_key=True) if isinstance(key, str) else key
                 if (isinstance(value, str) and value and isinstance(key, str)
-                        and SECRET_KEY.search(key) and not PLACEHOLDER.fullmatch(value)):
+                        and SECRET_KEY.search(key) and not PLACEHOLDER.fullmatch(value)
+                        and value.lower() not in ('true', 'false')):
                     out[new_key] = self._secret(path + [new_key], value)
                 else:
                     out[new_key] = self._walk(value, path + [new_key])
