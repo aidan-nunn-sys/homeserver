@@ -100,8 +100,10 @@ without calling the owner. Signup should be fast with no hiccups.
 - **jfa-go signs in to Jellyfin as a dedicated admin service account**
   (jfa-go uses an admin username/password, not an API key), not the owner's
   own admin account. Creating it signs no one out. *(Design author's call.)*
-- **Template user:** a dedicated hidden, disabled-for-login template user
-  holds the settings new accounts copy. *(Design author's call.)*
+- **Template user:** a dedicated hidden template user with a long random
+  password nobody knows holds the settings new accounts copy. It is not
+  disabled, because profiles copy the account policy and new accounts would
+  start disabled. *(Design author's call.)*
 - **jfa-go's admin pages are not public.** Only the invite signup, My Account
   and reset pages are reachable from the internet; the admin UI (creating
   invites, managing users) is reached only from home or over Tailscale, never
