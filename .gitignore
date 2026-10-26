@@ -4,6 +4,7 @@
 *.gz
 *.log
 *.conf
+!jellyfin/custom/jfa-go/npm-advanced.conf
 *.sqlite
 *.db
 *.db-*
