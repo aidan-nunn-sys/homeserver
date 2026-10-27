@@ -27,6 +27,12 @@ The admin UI and API are **never public**: reach them over LAN or Tailscale
 Placeholders: `<JOIN_HOST>` public jfa-go host, `<JELLYFIN_PUBLIC_URL>` public
 Jellyfin URL, `<JFA_LAN>` jfa-go LXC address, `<OWNER_NAME>` the name viewers
 know the owner by. `{username}`-style fields are jfa-go's own and stay as is.
+In `config.example.ini`, `<HOST_n>`, `<DOMAIN_n>`, `<EMAIL_n>`,
+`<JFA_SMTP_USERNAME>` and `<JFA_INVITE_EMAILS_SUBJECT>` come from `.env`
+(written by `scripts/export_jfa.py`). Passwords never go to `.env`: take
+`<JFA_JELLYFIN_PASSWORD>` (the `jfa-go` Jellyfin user) and
+`<JFA_SMTP_PASSWORD>` from the password manager; the UI and Mailgun ones are
+unused.
 
 | Message file | jfa-go message |
 |---|---|
