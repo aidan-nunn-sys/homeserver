@@ -15,13 +15,18 @@ import envfile
 from sanitize import EMAIL, GUID, PRIVATE_IP, URL_IP, norm_guid
 
 ALLOWLIST = 'jellyfin/snapshot/ids-allowlist.json'
+# Env keys whose values are public names (stock paths, the jfa-go service and template
+# accounts), not identifying. Key names only, so no value is ever committed.
+PUBLIC_KEYS = 'jellyfin/public-env-keys.json'
 # "Version": "10.11.5.0" is a version, not a 10.x.x.x address.
 VERSION_VALUE = re.compile(r'"[A-Za-z]*(?:Version|Abi)":\s*"[0-9.]+"', re.I)
 
 
-def env_values(env):
+def env_values(env, public_keys=frozenset()):
     values = []
     for key, value in env.items():
+        if key in public_keys:
+            continue
         parts = value.split(',') if key == 'PRIVATE_DOMAINS' else [value]
         values += [p.strip() for p in parts if len(p.strip()) >= 4]
     return values
@@ -64,7 +69,9 @@ def main(argv=None):
     env_path = repo / 'jellyfin' / '.env'
     if not env_path.exists():
         print('warning: jellyfin/.env not found; checking patterns only')
-    values = env_values(envfile.load(env_path))
+    keys_path = repo / PUBLIC_KEYS
+    public_keys = set(json.loads(keys_path.read_text())) if keys_path.exists() else set()
+    values = env_values(envfile.load(env_path), public_keys)
     if args.all:
         listed = read(ALLOWLIST) if (repo / ALLOWLIST).exists() else ''
     else:

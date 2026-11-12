@@ -16,6 +16,10 @@ class ScanTextTest(unittest.TestCase):
         values = check_secrets.env_values({'PRIVATE_DOMAINS': 'a.example, b.example', 'X': 'abc'})
         self.assertEqual(values, ['a.example', 'b.example'])
 
+    def test_env_values_skip_public_keys(self):
+        values = check_secrets.env_values({'USER_1': 'jfa-go', 'USER_2': 'zorbleton'}, {'USER_1'})
+        self.assertEqual(values, ['zorbleton'])
+
     def test_finds_each_kind(self):
         text = '\n'.join(['ok', 'key ' + fixtures.SONARR_KEY, fixtures.IP,
                           fixtures.EMAIL_ADDR, fixtures.ITEM_ID])

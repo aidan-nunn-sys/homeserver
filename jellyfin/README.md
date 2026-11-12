@@ -24,6 +24,9 @@ git add jellyfin/snapshot && git commit -m "jellyfin: snapshot"
 ```
 
 The pre-commit hook blocks the commit if anything identifying slipped through.
+If it flags a `.env` value that is a public name (a stock path, or a service
+account such as jfa-go's), add that value's key name to `public-env-keys.json`.
+Only key names go there, never values.
 
 ## Making a change (so it can be reverted)
 
