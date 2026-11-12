@@ -175,6 +175,61 @@
     "Name": "Movies"
   },
   {
+    "CollectionType": "movies",
+    "LibraryOptions": {
+      "AllowEmbeddedSubtitles": "AllowAll",
+      "AutomaticRefreshIntervalDays": 0,
+      "AutomaticallyAddToCollection": false,
+      "CustomTagDelimiters": [
+        "/",
+        "|",
+        ";",
+        "\\"
+      ],
+      "DelimiterWhitelist": [],
+      "DisabledLocalMetadataReaders": [],
+      "DisabledLyricFetchers": [],
+      "DisabledMediaSegmentProviders": [],
+      "DisabledSubtitleFetchers": [],
+      "EnableAutomaticSeriesGrouping": true,
+      "EnableChapterImageExtraction": false,
+      "EnableEmbeddedEpisodeInfos": false,
+      "EnableEmbeddedExtrasTitles": false,
+      "EnableEmbeddedTitles": false,
+      "EnableInternetProviders": false,
+      "EnableLUFSScan": false,
+      "EnablePhotos": true,
+      "EnableRealtimeMonitor": false,
+      "EnableTrickplayImageExtraction": false,
+      "Enabled": true,
+      "ExtractChapterImagesDuringLibraryScan": false,
+      "ExtractTrickplayImagesDuringLibraryScan": false,
+      "LyricFetcherOrder": [],
+      "MediaSegmentProviderOrder": [],
+      "PathInfos": [
+        {
+          "Path": "<MEDIA_ROOT>/leaving-soon/movies/media"
+        }
+      ],
+      "PreferNonstandardArtistsTag": false,
+      "RequirePerfectSubtitleMatch": true,
+      "SaveLocalMetadata": false,
+      "SaveLyricsWithMedia": false,
+      "SaveSubtitlesWithMedia": true,
+      "SaveTrickplayWithMedia": false,
+      "SeasonZeroDisplayName": "Specials",
+      "SkipSubtitlesIfAudioTrackMatches": true,
+      "SkipSubtitlesIfEmbeddedSubtitlesPresent": false,
+      "SubtitleFetcherOrder": [],
+      "TypeOptions": [],
+      "UseCustomTagDelimiters": false
+    },
+    "Locations": [
+      "<MEDIA_ROOT>/leaving-soon/movies/media"
+    ],
+    "Name": "Movies (Leaving Soon)"
+  },
+  {
     "CollectionType": "tvshows",
     "LibraryOptions": {
       "AllowEmbeddedSubtitles": "AllowAll",
@@ -352,5 +407,60 @@
       "<MEDIA_ROOT>/TV-Shows"
     ],
     "Name": "Shows"
+  },
+  {
+    "CollectionType": "tvshows",
+    "LibraryOptions": {
+      "AllowEmbeddedSubtitles": "AllowAll",
+      "AutomaticRefreshIntervalDays": 0,
+      "AutomaticallyAddToCollection": false,
+      "CustomTagDelimiters": [
+        "/",
+        "|",
+        ";",
+        "\\"
+      ],
+      "DelimiterWhitelist": [],
+      "DisabledLocalMetadataReaders": [],
+      "DisabledLyricFetchers": [],
+      "DisabledMediaSegmentProviders": [],
+      "DisabledSubtitleFetchers": [],
+      "EnableAutomaticSeriesGrouping": true,
+      "EnableChapterImageExtraction": false,
+      "EnableEmbeddedEpisodeInfos": false,
+      "EnableEmbeddedExtrasTitles": false,
+      "EnableEmbeddedTitles": false,
+      "EnableInternetProviders": false,
+      "EnableLUFSScan": false,
+      "EnablePhotos": true,
+      "EnableRealtimeMonitor": false,
+      "EnableTrickplayImageExtraction": false,
+      "Enabled": true,
+      "ExtractChapterImagesDuringLibraryScan": false,
+      "ExtractTrickplayImagesDuringLibraryScan": false,
+      "LyricFetcherOrder": [],
+      "MediaSegmentProviderOrder": [],
+      "PathInfos": [
+        {
+          "Path": "<MEDIA_ROOT>/leaving-soon/tv/media"
+        }
+      ],
+      "PreferNonstandardArtistsTag": false,
+      "RequirePerfectSubtitleMatch": true,
+      "SaveLocalMetadata": false,
+      "SaveLyricsWithMedia": false,
+      "SaveSubtitlesWithMedia": true,
+      "SaveTrickplayWithMedia": false,
+      "SeasonZeroDisplayName": "Specials",
+      "SkipSubtitlesIfAudioTrackMatches": true,
+      "SkipSubtitlesIfEmbeddedSubtitlesPresent": false,
+      "SubtitleFetcherOrder": [],
+      "TypeOptions": [],
+      "UseCustomTagDelimiters": false
+    },
+    "Locations": [
+      "<MEDIA_ROOT>/leaving-soon/tv/media"
+    ],
+    "Name": "Shows (Leaving Soon)"
   }
 ]

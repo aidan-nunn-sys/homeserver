@@ -263,6 +263,16 @@
     "Triggers": []
   },
   {
+    "Key": "JellyfinEnhancedRefreshAwardTags",
+    "Name": "Refresh Awards Tags",
+    "Triggers": [
+      {
+        "TimeOfDayTicks": 144000000000,
+        "Type": "DailyTrigger"
+      }
+    ]
+  },
+  {
     "Key": "JellyfinEnhancedRefreshCdnAssets",
     "Name": "Refresh CDN Assets",
     "Triggers": [
@@ -271,6 +281,16 @@
       },
       {
         "IntervalTicks": 864000000000,
+        "Type": "IntervalTrigger"
+      }
+    ]
+  },
+  {
+    "Key": "JellyfinEnhancedRefreshLeavingSoonTags",
+    "Name": "Refresh Leaving Soon Tags",
+    "Triggers": [
+      {
+        "IntervalTicks": 36000000000,
         "Type": "IntervalTrigger"
       }
     ]

@@ -60,49 +60,7 @@
     "SortBy": "SortName",
     "SortOrder": "Ascending"
   },
-  "<USER_12>": {
-    "Client": "emby",
-    "CustomPrefs": {
-      "chromecastVersion": "stable",
-      "dashboardTheme": null,
-      "enableNextVideoInfoOverlay": "False",
-      "skipBackLength": "10000",
-      "skipForwardLength": "30000",
-      "tvhome": null
-    },
-    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
-    "PrimaryImageHeight": 250,
-    "PrimaryImageWidth": 250,
-    "RememberIndexing": false,
-    "RememberSorting": false,
-    "ScrollDirection": "Horizontal",
-    "ShowBackdrop": true,
-    "ShowSidebar": false,
-    "SortBy": "SortName",
-    "SortOrder": "Ascending"
-  },
   "<USER_13>": {
-    "Client": "emby",
-    "CustomPrefs": {
-      "chromecastVersion": "stable",
-      "dashboardTheme": null,
-      "enableNextVideoInfoOverlay": "False",
-      "skipBackLength": "10000",
-      "skipForwardLength": "30000",
-      "tvhome": null
-    },
-    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
-    "PrimaryImageHeight": 250,
-    "PrimaryImageWidth": 250,
-    "RememberIndexing": false,
-    "RememberSorting": false,
-    "ScrollDirection": "Horizontal",
-    "ShowBackdrop": true,
-    "ShowSidebar": false,
-    "SortBy": "SortName",
-    "SortOrder": "Ascending"
-  },
-  "<USER_14>": {
     "Client": "emby",
     "CustomPrefs": {
       "chromecastVersion": "stable",
@@ -132,6 +90,72 @@
       "enableNextVideoInfoOverlay": "False",
       "skipBackLength": "10000",
       "skipForwardLength": "30000",
+      "tvhome": null,
+      "useEpisodeImagesInNextUpAndResume": "false"
+    },
+    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
+    "PrimaryImageHeight": 250,
+    "PrimaryImageWidth": 250,
+    "RememberIndexing": false,
+    "RememberSorting": false,
+    "ScrollDirection": "Horizontal",
+    "ShowBackdrop": true,
+    "ShowSidebar": false,
+    "SortBy": "SortName",
+    "SortOrder": "Ascending"
+  },
+  "<USER_16>": {
+    "Client": "emby",
+    "CustomPrefs": {
+      "chromecastVersion": "stable",
+      "dashboardTheme": null,
+      "enableNextVideoInfoOverlay": "False",
+      "skipBackLength": "10000",
+      "skipForwardLength": "30000",
+      "tvhome": null,
+      "useEpisodeImagesInNextUpAndResume": "false"
+    },
+    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
+    "PrimaryImageHeight": 250,
+    "PrimaryImageWidth": 250,
+    "RememberIndexing": false,
+    "RememberSorting": false,
+    "ScrollDirection": "Horizontal",
+    "ShowBackdrop": true,
+    "ShowSidebar": false,
+    "SortBy": "SortName",
+    "SortOrder": "Ascending"
+  },
+  "<USER_17>": {
+    "Client": "emby",
+    "CustomPrefs": {
+      "chromecastVersion": "stable",
+      "dashboardTheme": null,
+      "enableNextVideoInfoOverlay": "False",
+      "skipBackLength": "10000",
+      "skipForwardLength": "30000",
+      "tvhome": null,
+      "useEpisodeImagesInNextUpAndResume": "false"
+    },
+    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
+    "PrimaryImageHeight": 250,
+    "PrimaryImageWidth": 250,
+    "RememberIndexing": false,
+    "RememberSorting": false,
+    "ScrollDirection": "Horizontal",
+    "ShowBackdrop": true,
+    "ShowSidebar": false,
+    "SortBy": "SortName",
+    "SortOrder": "Ascending"
+  },
+  "<USER_18>": {
+    "Client": "emby",
+    "CustomPrefs": {
+      "chromecastVersion": "stable",
+      "dashboardTheme": null,
+      "enableNextVideoInfoOverlay": "False",
+      "skipBackLength": "10000",
+      "skipForwardLength": "30000",
       "tvhome": null
     },
     "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
@@ -145,7 +169,28 @@
     "SortBy": "SortName",
     "SortOrder": "Ascending"
   },
-  "<USER_1>": {
+  "<USER_19>": {
+    "Client": "emby",
+    "CustomPrefs": {
+      "chromecastVersion": "stable",
+      "dashboardTheme": null,
+      "enableNextVideoInfoOverlay": "False",
+      "skipBackLength": "10000",
+      "skipForwardLength": "30000",
+      "tvhome": null
+    },
+    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
+    "PrimaryImageHeight": 250,
+    "PrimaryImageWidth": 250,
+    "RememberIndexing": false,
+    "RememberSorting": false,
+    "ScrollDirection": "Horizontal",
+    "ShowBackdrop": true,
+    "ShowSidebar": false,
+    "SortBy": "SortName",
+    "SortOrder": "Ascending"
+  },
+  "<USER_20>": {
     "Client": "emby",
     "CustomPrefs": {
       "chromecastVersion": "stable",
@@ -197,27 +242,6 @@
       "skipForwardLength": "30000",
       "tvhome": null,
       "useEpisodeImagesInNextUpAndResume": "false"
-    },
-    "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
-    "PrimaryImageHeight": 250,
-    "PrimaryImageWidth": 250,
-    "RememberIndexing": false,
-    "RememberSorting": false,
-    "ScrollDirection": "Horizontal",
-    "ShowBackdrop": true,
-    "ShowSidebar": false,
-    "SortBy": "SortName",
-    "SortOrder": "Ascending"
-  },
-  "<USER_4>": {
-    "Client": "emby",
-    "CustomPrefs": {
-      "chromecastVersion": "stable",
-      "dashboardTheme": null,
-      "enableNextVideoInfoOverlay": "False",
-      "skipBackLength": "10000",
-      "skipForwardLength": "30000",
-      "tvhome": null
     },
     "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
     "PrimaryImageHeight": 250,
@@ -303,7 +327,8 @@
       "enableNextVideoInfoOverlay": "False",
       "skipBackLength": "10000",
       "skipForwardLength": "30000",
-      "tvhome": null
+      "tvhome": null,
+      "useEpisodeImagesInNextUpAndResume": "false"
     },
     "Id": "3ce5b65d-e116-d731-65d1-efc4a30ec35c",
     "PrimaryImageHeight": 250,

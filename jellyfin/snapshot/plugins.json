@@ -21,19 +21,19 @@
     "Id": "043b2c48b3e04610b3988217b146d1a4",
     "Name": "Collection Sections",
     "Status": "Active",
-    "Version": "2.3.10.0"
+    "Version": "2.3.11.0"
   },
   {
     "Id": "5e87cc92571a4d8d8d98d2d4147f9f90",
     "Name": "File Transformation",
     "Status": "Active",
-    "Version": "3.0.2.0"
+    "Version": "3.0.3.0"
   },
   {
     "Id": "b8298e012697407ab44daa8dc795e850",
     "Name": "Home Screen Sections",
     "Status": "Active",
-    "Version": "3.0.3.0"
+    "Version": "3.0.4.0"
   },
   {
     "Id": "c83d86bba1e04c35a113e2101cf4ee6b",
@@ -51,7 +51,7 @@
     "Id": "f69e946a4b3c4e9a8f0a8d7c1b2c4d9b",
     "Name": "Jellyfin Enhanced",
     "Status": "Active",
-    "Version": "12.13.0.0"
+    "Version": "12.15.0.0"
   },
   {
     "Id": "dfee382801df49df85b15c2b75e5ea1a",
